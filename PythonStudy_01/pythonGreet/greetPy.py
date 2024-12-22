@@ -1,5 +1,4 @@
 from date_greetpy import greet
-from datetime import datetime
 while True:
     try:
         nome = (input("Qual é o seu nome: "))
@@ -12,4 +11,5 @@ while True:
         print("Digite apenas letras.")
         continue
     print(f"Bom dia {nome}! Hoje é {greet()} e é um belo dia para estudar!")
+    #Chama a função greet já no print, tornando redundantes as chamadas anteriores.
     break
