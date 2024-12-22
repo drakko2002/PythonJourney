@@ -19,8 +19,5 @@ class Soma:
         return sum()
 
     def mostrarResultado():
-        if not self.numeros:
-            print("Nenhum algarismo foi inserido!")
-        else:
-            print(f"Números inseridos: {', '.join(map(str, self.numeros))}")
-            print(f"Soma total: {self.calcular_soma()}")
+        #Isso é impraticável.
+
