@@ -9,6 +9,9 @@ class Carro:
         return f'Carro da marca {self.marca}, modelo {self.modelo} e cor {self.cor}'
     #Função description foi criada pra contornar o overflow.
     ##Ela implementa um método que retorna informações.
+    def __str__(self):
+        return self.description() #Toda vez que se referir à classe carro por meio de um objeto
+    #Que for uma string, você terá agora retornada as informações do método description.
 
 
 #Agora que isso tudo foi estabelecido nos conceitos da classe.
