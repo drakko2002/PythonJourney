@@ -1,3 +1,4 @@
+from typing import Self
 class Carro:
     def __init__(self, marca: str, modelo: str, cor:str):# -> None: #Isso sempre aponta para NoneClass.
         self.marca = marca #da classe carro, self.marca equivale à marca
@@ -12,6 +13,11 @@ class Carro:
     def __str__(self):
         return self.description() #Toda vez que se referir à classe carro por meio de um objeto
     #Que for uma string, você terá agora retornada as informações do método description.
+
+    def __add__(self, other):
+        return self.description() + other.description()
+
+    #Agora é possível concatenar um carro e outro numa operação de soma.
 
 
 #Agora que isso tudo foi estabelecido nos conceitos da classe.
