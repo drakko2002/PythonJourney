@@ -1,12 +1,20 @@
 from time_func import timeFunction
 
-birth_year = int(input("What's the birthyear: "))
-actual_year = int(timeFunction())
+def calculate():
+    while True:
+        try:
+            birth_year = int(input("What's the birthyear: ")) #Converte a input do usuário para inteiro.
+        except ValueError:
+            print("Digite apenas números inteiros.")
+            continue
 
-calc_Age = actual_year - birth_year
+        actual_year = timeFunction()
 
-print(calc_Age)
+        calc_Age = int(actual_year) - int(birth_year)
 
 
 
-print("A idade do individuo é: ", calc_Age)
+        print("A idade do individuo é: ", calc_Age)
+        print(f"\nFim do programa.\n")
+        break
+calculate()
