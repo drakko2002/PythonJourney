@@ -14,3 +14,8 @@ else:
     print("X is not much bigger than 5.")
 
     #Usuário pode inserir entrada de dados e esperar pelo prompt.
+    #Pode haver quantas cláusulas ELIF o programador quiser inserir.
+    #Isso é arbitrário.
+    #A cláusula ELSE, por outro lado, é única. Ela deve ser designada sempre
+    #Ao final do bloco.
+    '''Se não fizer nenhuma das coisas acima, faça isso.'''
