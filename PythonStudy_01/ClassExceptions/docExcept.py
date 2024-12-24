@@ -9,7 +9,8 @@ class D(C):
 
 for cls in [B, C, D]:
     try:
-        raise cls()
+        raise cls() #The first Matching except clause is triggered
+    #Wich means that if we swap the order ti B,C,D, it would prompt you with 3 Bs instead.
     except D: #Ele procura pela exceção levantada de cima para baixo.
         print("D") #Nesse caso, D é uma instância de C
     except C:
