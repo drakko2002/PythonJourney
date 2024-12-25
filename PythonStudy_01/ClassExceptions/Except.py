@@ -16,7 +16,7 @@ class C(B):
 try:
     raise C()  # Lança uma exceção do tipo C
 except A:
-    print("A") #C herda de B, que Herda de A. A é a classe base nesse caso.
+    print("A") #C herda de B, que Herda de A.; A é a classe base nesse caso.
 except B:
     print("B") #B é uma classe derivada de A, mas A é independente de B.
 except C: #C e B são subclasses de A, e por isso, não capturam exceções da classe base.
