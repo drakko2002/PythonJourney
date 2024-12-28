@@ -65,6 +65,7 @@ while True:
         continue
     except KeyboardInterrupt:
         print("Programa encerrado pelo usuário.")
+#    finally: #Independente das exceções serem tratadas ou não, o bloco finally finaliza o programa.
         break
         #break #Se colocar continue nisso, impede o usuário de interromper programa.
 
