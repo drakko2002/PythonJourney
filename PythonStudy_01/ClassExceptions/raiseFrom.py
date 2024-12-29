@@ -8,15 +8,19 @@ while True:
         b: int = int(input("Enter another number:"))
         c = float(a/b)
         print(c)
-    except ZeroDivisionError as e:
-        print("Entrada de dados inválida!")
+    except ZeroDivisionError:
+        print("Impossível realizar operação matematica com 0.")
         continue
+
+
+    except ValueError:
+        print("Valor inválido!")
 
 
     except Exception as e:
         print("Erro inesperado!")
         continue
-#A classe Exception é uma super classe de exceção, que torna redundante o uso de suas subclasses.
+#A classe Exception é uma superclasse de exceção, que torna redundante o uso de subclasses.
 
     #except ValueError as e:
         #print("Que porra é essa?")
