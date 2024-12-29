@@ -8,14 +8,24 @@
 #        return "Odd"
 try:
     a = input("Entre com os dados: ") #Pede para que o usuário entre com os dados.
+
+
 except KeyboardInterrupt:
     raise SystemExit("Usuário finalizou programa.") from KeyboardInterrupt
+
+
+finally: #Antes do bloco Try se completar, o bloco finally será executado.
+    print("Fim do programa.")
+
+
 def convert_to_int(user_input): #Função que converte string para int.
+
     try:
 
         return int(user_input) # Retorna o valor inserido pelo usuário como type:int
     except ValueError: # Se o valor inserido não puder ser convertido para inteiro, retorna um erro
         raise ValueError(f"The entered value {a} is not a valid integer.")
+    
 
 
 try:
