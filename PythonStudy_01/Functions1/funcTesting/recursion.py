@@ -30,5 +30,4 @@ def add_one(num): #Cria função add_one()
     return add_one(total) #Retorna o valor da função dentro da variável total.
 add_one(15) #Chama pela função com prefixo de Quinze.
 #add_one(0) #Por ser menor que 10, gera uma contagem até 10.
-
 #O código acima gera uma contagem infinita.
