@@ -45,6 +45,8 @@ def string_list():
     lista_frutas = ['banana', 'laranja', 'uva', 'abacaxi', 'melancia']
 
     questiona_fruta = input("Verifique se a fruta está na lista: ")
+    #O laço FOR foi retirado, considerando que o mesmo era redundante e não contribuía
+    #para o funcionamento do código.
 
     if questiona_fruta in lista_frutas:
         #Valida valor inserido pelo usuário em variável questiona_fruta.
@@ -55,22 +57,32 @@ def string_list():
             #Inicia um loop até que a resposta seja o valor desejado.
             resposta = input("Entrada inválida. Digite Y para Yes ou N para No: ").upper()
         if resposta == "Y":
+            #Se resposta do usuário for Y, if retornará True, e a condicional será executada.
             lista_frutas.pop(lista_frutas.index(questiona_fruta))
             print("A fruta foi removida!")
         else:
             print("Usuário optou por não remover a fruta.")
 
     else:
+        #Esse bloco poderia se tornar uma função para facilitar o uso.
         print("A fruta não está na lista...")
         resposta = input("Deseja adicionar a fruta? (Y/N): ").upper()
         while resposta not in ["Y", "N"]:
+            #Induz usuário em loop para que a entrada de dados seja a resposta ideal.
             resposta = input("Entrada inválida. Digite Y para Yes ou N para No: ").upper()
+
+
         if resposta == "Y":
             lista_frutas.append(questiona_fruta)
             print("A fruta foi adicionada!")
+        #Se resposta do usuário for positiva, executa a adição do elemento
+        #que foi salvo na variável questiona_fruta.
         else:
             print("Usuário optou por não adicionar a fruta.")
 
     print("Lista de frutas atualizada:", lista_frutas)
     return lista_frutas
-
+string_list()
+#O fluxo do programa se se executa razoavelmente bem.
+#Talvez um loop que induza o usuário a adicionar frutas até que ele opte por sair
+#seja divertido.
