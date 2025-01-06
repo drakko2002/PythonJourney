@@ -8,32 +8,56 @@ print(dicionarioTeste)
 
 
 def valida_opcao():
-
-    while valida_entrada not in:
+    while True:
         try:
-            valida_entrada = int(input("Digite uma opção entre 1 e 5: "))
-            print(valida_entrada)
-            if valida_entrada not in opcao:
-                raise ValueError
-            if valida_entrada in opcao:
-                break
+            opcao = int(input("Digite a opção desejada: "))
+            atualiza_chave = input("Digite a chave a ser atualizada: ")
+            valor_chave = int(input("Digite o valor da chave: "))
+            acao_chave = str(input("Digite a chave: "))
+            if opcao not in [1,2,3,4,5]:
+                print("Suas opções são 1, 2, 3, 4 e 5.")
+                #Ao invocar Raise ValueError aqui, o código finaliza por erro de valor.
+                #Isso torna o "continue" do bloco inalcançável.
+                continue
+            if opcao == 1:
+                print("Selecionou atualizar chave.")
+                print(atualiza_chave)
+                print(valor_chave)
+                print("Chave atualizada!")
+                dicionarioTeste.update({atualiza_chave: valor_chave})
+                print(dicionarioTeste)
+            if opcao == 2:
+                print("Selecionou excluir chave.")
+                print(acao_chave)
+                dicionarioTeste.pop(acao_chave)
+            if opcao == 3:
+                print("Selecionou visualizar chave.")
+                print(acao_chave)
+                if acao_chave in dicionarioTeste:
+                    print(dicionarioTeste[acao_chave])
+                    break
+                if acao_chave not in dicionarioTeste:
+                    print("A chave não existe.")
+                    continue
+            if opcao == 4:
+                print("Saindo do programa...")
+                raise SystemExit("Fluxo do programa foi finalizado.")
         except ValueError:
-            print("A opção inserida não existe.")
-            valida_opcao()
-
-
-valida_opcao()
+            print("O valor digitado está incorreto. Tente novamente.")
+            continue
+        except KeyboardInterrupt:
+            print("Programa finalizado pelo usuário.")
+            break
 
 
 def fluxo():
     while True:
         try:
             print("--> Menu do Dicionário <--")
-            print("1 - Adicionar chave")
-            print("2 - Modificar chave")
-            print("3 - Excluir chave")
-            print("4 - Visualizar chave")
-            print("5 - Sair")
+            print("1 - Modificar chave")
+            print("2 - Excluir chave")
+            print("3 - Visualizar chave")
+            print("4 - Sair")
             valida_opcao()
         except ValueError:
             print("Opção inválida.")
@@ -45,12 +69,4 @@ def fluxo():
             print("Programa encerrado.")
             break
 
-
-'''        valida_chave = str(input("Digite uma chave: "))
-        modifica_chave = int(input("Digite um valor: "))
-        if valida_chave in dicionarioTeste:
-            print("Deseja modificar a chave?")
-            print("1 - Sim")
-            print("2 - Não")
-            print("2 - Sair")
-'''
+fluxo()
