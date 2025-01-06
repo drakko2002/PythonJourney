@@ -107,3 +107,6 @@ def fluxo():
                 break
 
 fluxo()
+#A representação de dicionários em Python sugere que cada nome de chave esteja associado
+#com um valor. Isto é, se a chave for apagado, o valor a ela associado também
+#Será apagado, consequentemente.
