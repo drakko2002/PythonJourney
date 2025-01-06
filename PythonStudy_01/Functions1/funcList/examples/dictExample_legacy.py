@@ -95,3 +95,8 @@ def fluxo():
             break
 
 fluxo()
+#Solução ideal foi refatorar o código dentro de dictExample.py, de modo que todas as funções
+#Ficassem separadas, agregando pra modularidade e para manutenção do código.
+#Deste modo, se reduz o risco de erros oriúndos de redundância e reciclagem de informações.
+#Ao finalizar cada bloco if com return() ou break, impede-se conflitos de dados ou comportamentos
+#indesejados por parte do fluxo principal.
