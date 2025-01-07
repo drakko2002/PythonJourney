@@ -3,13 +3,26 @@
 Peça ao usuário que insira uma frase.
 Conte quantas vezes cada palavra aparece e armazene essa contagem em um dicionário.
 Exiba o dicionário com o formato: {palavra: contagem}.'''
-def coletar(palavras,contador: dict) -> dict:
-    #palavras = {"palavra": "contagem"}
+def coletar() -> dict:
     frase = input("Insira uma frase: ")
-    palavra = frase.split()
-    for i in range(len(palavra)):
-        contador = (palavra.count(palavra[i]))
-        palavras: dict = {"palavra": palavra, "contagem": contador}
-        print(palavras)
-        return palavras
-coletar(palavras={},contador={})
+    #Solicita a frase para o usuário.
+
+    for palavra, contagem in palavras.items():
+        palavra = frase.split()
+        palavras = {"palavra":palavra,"contagem":contagem}
+        print(f"{palavra}: {contagem}")
+        if palavra not in palavras:
+            palavras[contagem] = 1
+            print(palavras)
+        if palavra in palavras:
+            palavras[contagem] += 1
+            print(palavras)
+        else:
+            palavras[palavra] = 1
+            return palavras
+    print(palavras)
+coletar()
+#AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
