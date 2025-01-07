@@ -76,3 +76,4 @@ def fluxo_dados():
 # Execução principal
 if __name__ == "__main__":
     fluxo_dados()
+#Foi o GPT que me disse pra fazer dessa forma.
