@@ -78,3 +78,6 @@ def set_example():
             print("Valor inserido é inválido.")
             continue
 set_example()
+#Todo: Melhorar fluxo do código.
+#Todo: Adicionar funcionalidade que compare desempenho dos dois jogadores.
+#Todo: Criar função secundária?
