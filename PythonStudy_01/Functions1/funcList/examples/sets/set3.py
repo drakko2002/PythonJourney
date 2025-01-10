@@ -5,29 +5,38 @@
 colecao_filmes = set() #Conjunto vazio nomeado colecao_filmes.
 #Variável GLOBAL.
 
-def validar():
+def validar() -> None:
     mov_var = str(input("Deseja adicionar um filme? [S/N] ")).strip().upper()
     while True:
             try:
+                if mov_var not in 'SN':
+                    raise ValueError
+
                 if mov_var == 'S':
                     print("Disse sim!")
-                    return adiciona_filme()
+                    break
 
                 if mov_var == 'N':
                     print("Disse não!")
-                    return menu
+                    return menu()
+                else:
+                    raise ValueError("Valor inesperado. Tente novamente.")
+
 
             except (ValueError, Exception) as error:
                 print(f"Um erro ocorreu: {error}")
+
+                return validar()
 
 
 
 def adiciona_filme() -> colecao_filmes:
     #Evite usar sets() vazios recursivos dentro das funções.
-    validar()
+
 
     while True:
         try:
+            validar()
         # Variáveis da Função.
             filme = str(input("Digite o titulo do filme: ")).strip().title()
             genero = str(input("Digite o genero do filme: ")).strip().title()
@@ -67,7 +76,8 @@ def menu() -> colecao_filmes:
     while True:
         opcao = int(input("Digite opção desejada: "))
         if opcao == 1:
-            colecao_filmes.add(adiciona_filme())
+            adiciona_filme()
+
             break
         if opcao == 2:
             print(colecao_filmes)
