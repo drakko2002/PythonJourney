@@ -6,21 +6,24 @@ colecao_filmes = set() #Conjunto vazio nomeado colecao_filmes.
 #Variável GLOBAL.
 
 def validar() -> None:
-    mov_var = str(input("Deseja adicionar um filme? [S/N] ")).strip().upper()
+    mov_var = str(input("Deseja adicionar um filme? [S/N] ou 'menu' -> ")).strip().upper()
     while True:
             try:
-                if mov_var not in 'SN':
+                if mov_var not in ['S','N','MENU'] or len(mov_var) < 1:
                     raise ValueError
 
-                if mov_var == 'S':
+                elif mov_var == 'MENU':
+                    return menu()
+
+                elif mov_var == 'S':
                     print("Disse sim!")
                     break
 
-                if mov_var == 'N':
+                elif mov_var == 'N':
                     print("Disse não!")
-                    return menu()
+                    break
                 else:
-                    raise ValueError("Valor inesperado. Tente novamente.")
+                    raise ValueError("Quê?")
 
 
             except (ValueError, Exception) as error:
@@ -37,38 +40,50 @@ def adiciona_filme() -> colecao_filmes:
     while True:
         try:
             validar()
+
         # Variáveis da Função.
             filme = str(input("Digite o titulo do filme: ")).strip().title()
             genero = str(input("Digite o genero do filme: ")).strip().title()
 
-            if adiciona_filme() in colecao_filmes:
-                print("O Filme já existe no catálogo!")
-                break
-            if adiciona_filme() not in colecao_filmes:
-                print("Filme adicionado com sucesso!")
-                break
 
-            colecao_filmes.add((filme, genero))
+            if (filme,genero) in colecao_filmes:
+
+                print("O Filme já existe no catálogo!")
+                return menu()
+
+            if (filme,genero) not in colecao_filmes:
+
+                print("Filme adicionado com sucesso!")
+                colecao_filmes.add((filme, genero))
+                print(colecao_filmes)
+
+                return menu()
+
+            #colecao_filmes.add((filme, genero))
+
         #Why i was calling the function inside the function?
-            print("Filme adicionado com sucesso!")
-            print(colecao_filmes)
+            #print("Filme adicionado com sucesso!")
+            #print(colecao_filmes)
         except (ValueError, Exception) as error:
             print(f"Um erro ocorreu: {error}")
             continue
+        return colecao_filmes
 
-'''def validar_filme(prompt:str):
-    while True:
-        try:'''
+
+
+
 def listar_filmes():
-    if colecao_filmes:
+    print("Selecionou listar filmes!")
+    if colecao_filmes: #Verifica se coleção contém algo através de operação booleana.
         print(f"A coleção contém os seguintes filmes: ")
         for filme in sorted(colecao_filmes):
             print(f"\n {filme} ")
     if not colecao_filmes:
         print("\nA coleção está vazia!")
-        return None
+        return menu()
 
 def menu() -> colecao_filmes:
+
     print("1 - Adicionar filme")
     print("2 - Listar filmes")
     print("3 - Remover filme")
@@ -80,19 +95,33 @@ def menu() -> colecao_filmes:
 
             break
         if opcao == 2:
-            print(colecao_filmes)
-            break
+            listar_filmes()
+            return menu()#Eu tinha colocado pra imprimir o set ao invés de chamar a função kkkk
         if opcao == 3:
             print("Remover filme")
-            break
+            remover_filme()
         if opcao == 4:
             raise SystemExit("Programa encerrado com sucesso!")
 
 
 
+def remover_filme():
+    print("Selecionou remover filme!")
+    if colecao_filmes:
+        listar_filmes()
+        filme = str(input("Digite o titulo do filme: ")).strip().title()
+        genero = str(input("Digite o genero do filme: ")).strip().title()
+        if (filme,genero) in colecao_filmes:
+            colecao_filmes.remove((filme,genero))
+            print(f"O filme {filme} foi removido com sucesso!")
+            print(f"O catálogo de filmes foi atualizado: {colecao_filmes}")
+
 def main():
     print("Bem vindo ao programa de gerenciamento de filmes!")
-    menu()
-    return None
+    try:
+        menu()
+    except KeyboardInterrupt:
+        raise SystemExit("Programa encerrado pelo usuário.")
+
 if __name__ == "__main__":
     main()
