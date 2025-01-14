@@ -96,7 +96,10 @@ def menu() -> colecao_filmes:
             break
         if opcao == 2:
             listar_filmes()
-            return menu()#Eu tinha colocado pra imprimir o set ao invés de chamar a função kkkk
+
+            #Eu tinha colocado pra imprimir o set ao invés de chamar a função kkkk
+
+            print("A coleção contém {} filmes".format(len(colecao_filmes)))
         if opcao == 3:
             print("Remover filme")
             remover_filme()
