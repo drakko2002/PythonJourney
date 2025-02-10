@@ -8,8 +8,8 @@ class Soma:
         #Corredor infinito da calculadora!
         while True:
             entrada = input("Digite um número ou 'sair' para encerrar: ")
-            if entrada.lower() = "sair"
-            break
+            if entrada.lower() == "sair":
+                break
         try:
             numero = float(entrada)
             self.numeros.append(numero)
