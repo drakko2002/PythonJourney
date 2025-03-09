@@ -46,8 +46,8 @@ MAGENTA = '#FF00FF'
 YELLOW = '#F7F09A'
 
 # Define figure parameters
-FS = (13, 12)
-DPI = 150*4
+FS = (7, 7)
+DPI = 50
 SMALL_SIZE = 10
 MEDIUM_SIZE = 16
 BIGGER_SIZE = 26
@@ -81,10 +81,10 @@ ME = 500
 PS = 80
 lb = 2.
 ub = 8.
-npoints = 20
+npoints = 50
 
 x_data = np.linspace(lb, ub, npoints)
-y_data = objective_function(x_data) + (2*np.random.rand(npoints)-1)/2
+y_data = objective_function(x_data) + (2*np.random.rand(npoints)-1)/1.5
 
 problem_dict1 = {
     "bounds": FloatVar(lb=(lb,) * D, ub=(ub,) * D, name="delta"),
@@ -109,72 +109,72 @@ g_best1 = model1.solve(problem_dict1)
 model = model1
 g_best = g_best1
 nm = 1
-# g_best2 = model2.solve(problem_dict1)
-# if (g_best2.target.fitness < g_best.target.fitness):
-#     model = model2
-#     g_best = g_best2
-#     nm = 2
-# g_best3 = model3.solve(problem_dict1)
-# if (g_best3.target.fitness < g_best.target.fitness):
-#     model = model3
-#     g_best = g_best3
-#     nm = 3
-# g_best4 = model4.solve(problem_dict1)
-# if (g_best4.target.fitness < g_best.target.fitness):
-#     model = model4
-#     g_best = g_best4
-#     nm = 4
-# g_best5 = model5.solve(problem_dict1)
-# if (g_best5.target.fitness < g_best.target.fitness):
-#     model = model5
-#     g_best = g_best5
-#     nm = 5
-# g_best6 = model6.solve(problem_dict1)
-# if (g_best6.target.fitness < g_best.target.fitness):
-#     model = model6
-#     g_best = g_best6
-#     nm = 6
-# g_best7 = model7.solve(problem_dict1)
-# if (g_best7.target.fitness < g_best.target.fitness):
-#     model = model7
-#     g_best = g_best7
-#     nm = 7
-# g_best8 = model8.solve(problem_dict1)
-# if (g_best8.target.fitness < g_best.target.fitness):
-#     model = model8
-#     g_best = g_best8
-#     nm = 8
-# g_best9 = model9.solve(problem_dict1)
-# if (g_best9.target.fitness < g_best.target.fitness):
-#     model = model9
-#     g_best = g_best9
-#     nm = 9
-# g_best10 = model10.solve(problem_dict1)
-# if (g_best10.target.fitness < g_best.target.fitness):
-#     model = model10
-#     g_best = g_best10
-#     nm = 10
-# g_best11 = direct(fitness_function, bounds=[(lb, ub)])
-# if (g_best11.fun < g_best.target.fitness):
-#     print("### => ATTENTION!")
-#     nm = 11
-# g_best12 = shgo(fitness_function, bounds=[(lb, ub)])
-# if (g_best12.fun < g_best.target.fitness):
-#     print("### => ATTENTION!")
-#     nm = 12
+g_best2 = model2.solve(problem_dict1)
+if (g_best2.target.fitness < g_best.target.fitness):
+    model = model2
+    g_best = g_best2
+    nm = 2
+g_best3 = model3.solve(problem_dict1)
+if (g_best3.target.fitness < g_best.target.fitness):
+    model = model3
+    g_best = g_best3
+    nm = 3
+g_best4 = model4.solve(problem_dict1)
+if (g_best4.target.fitness < g_best.target.fitness):
+    model = model4
+    g_best = g_best4
+    nm = 4
+g_best5 = model5.solve(problem_dict1)
+if (g_best5.target.fitness < g_best.target.fitness):
+    model = model5
+    g_best = g_best5
+    nm = 5
+g_best6 = model6.solve(problem_dict1)
+if (g_best6.target.fitness < g_best.target.fitness):
+    model = model6
+    g_best = g_best6
+    nm = 6
+g_best7 = model7.solve(problem_dict1)
+if (g_best7.target.fitness < g_best.target.fitness):
+    model = model7
+    g_best = g_best7
+    nm = 7
+g_best8 = model8.solve(problem_dict1)
+if (g_best8.target.fitness < g_best.target.fitness):
+    model = model8
+    g_best = g_best8
+    nm = 8
+g_best9 = model9.solve(problem_dict1)
+if (g_best9.target.fitness < g_best.target.fitness):
+    model = model9
+    g_best = g_best9
+    nm = 9
+g_best10 = model10.solve(problem_dict1)
+if (g_best10.target.fitness < g_best.target.fitness):
+    model = model10
+    g_best = g_best10
+    nm = 10
+g_best11 = direct(fitness_function, bounds=[(lb, ub)])
+if (g_best11.fun < g_best.target.fitness):
+    print("### => ATTENTION!")
+    nm = 11
+g_best12 = shgo(fitness_function, bounds=[(lb, ub)])
+if (g_best12.fun < g_best.target.fitness):
+    print("### => ATTENTION!")
+    nm = 12
 
 print(f"Model: {model1.name}, Solution: {g_best1.solution}, Fitness: {g_best1.target.fitness}")
-# print(f"Model: {model2.name}, Solution: {g_best2.solution}, Fitness: {g_best2.target.fitness}")
-# print(f"Model: {model3.name}, Solution: {g_best3.solution}, Fitness: {g_best3.target.fitness}")
-# print(f"Model: {model4.name}, Solution: {g_best4.solution}, Fitness: {g_best4.target.fitness}")
-# print(f"Model: {model5.name}, Solution: {g_best5.solution}, Fitness: {g_best5.target.fitness}")
-# print(f"Model: {model6.name}, Solution: {g_best6.solution}, Fitness: {g_best6.target.fitness}")
-# print(f"Model: {model7.name}, Solution: {g_best7.solution}, Fitness: {g_best7.target.fitness}")
-# print(f"Model: {model8.name}, Solution: {g_best8.solution}, Fitness: {g_best8.target.fitness}")
-# print(f"Model: {model9.name}, Solution: {g_best9.solution}, Fitness: {g_best9.target.fitness}")
-# print(f"Model: {model10.name}, Solution: {g_best10.solution}, Fitness: {g_best10.target.fitness}")
-# print(f"Model: {"DIRECT"}, Solution: {g_best11.x}, Fitness: {g_best11.fun}")
-# print(f"Model: {"SHGO"}, Solution: {g_best12.x}, Fitness: {g_best12.fun}")
+print(f"Model: {model2.name}, Solution: {g_best2.solution}, Fitness: {g_best2.target.fitness}")
+print(f"Model: {model3.name}, Solution: {g_best3.solution}, Fitness: {g_best3.target.fitness}")
+print(f"Model: {model4.name}, Solution: {g_best4.solution}, Fitness: {g_best4.target.fitness}")
+print(f"Model: {model5.name}, Solution: {g_best5.solution}, Fitness: {g_best5.target.fitness}")
+print(f"Model: {model6.name}, Solution: {g_best6.solution}, Fitness: {g_best6.target.fitness}")
+print(f"Model: {model7.name}, Solution: {g_best7.solution}, Fitness: {g_best7.target.fitness}")
+print(f"Model: {model8.name}, Solution: {g_best8.solution}, Fitness: {g_best8.target.fitness}")
+print(f"Model: {model9.name}, Solution: {g_best9.solution}, Fitness: {g_best9.target.fitness}")
+print(f"Model: {model10.name}, Solution: {g_best10.solution}, Fitness: {g_best10.target.fitness}")
+print(f"Model: {"DIRECT"}, Solution: {g_best11.x}, Fitness: {g_best11.fun}")
+print(f"Model: {"SHGO"}, Solution: {g_best12.x}, Fitness: {g_best12.fun}")
 
 print("Best model: ")
 print(f"#{nm}, Model: {model.name}, Solution: {g_best.solution}, Fitness: {g_best.target.fitness}")
@@ -231,6 +231,7 @@ plt.scatter(x_data, y_data, label='Data', color=RED, s=100)
 plt.plot(x_fun, y_data_fit, label='Fit', color=GREEN, linewidth=3)
 plt.plot(x_fun, fun, label="$\\sin(x) + \\sin\\!\\left(\\frac{10x}{3}\\right)$", color=BLUE, linewidth=3)
 plt.legend(loc='best')
+plt.show()
 
 ##################################################################
 D = 2
