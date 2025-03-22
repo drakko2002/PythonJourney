@@ -71,126 +71,58 @@ def objective_function(x):
     return f
 
 def fitness_function(parameters):
-    a, b = parameters
-    predicted = np.sin(b * x_data) + np.sin(a * x_data)
+    Ws = parameters
+    predicted = Ws[0]
+    for i in range(len(Ws)):
+        if i == 0:
+            continue
+        predicted += (Ws[i] * x_data[f'x{i}'])
+
     diff = predicted - y_data
     mae = np.mean(np.abs(diff))
     return mae
 
-D = 2
-ME = 500
+D = 9
+ME = 100
 PS = 80
 lb = 0.
-ub = 8.
-npoints = 20
+ub = 1
+npoints = 133
 
-x_data = np.linspace(lb, ub, npoints)
-y_data = objective_function(x_data) + (2*np.random.rand(npoints)-1)/2
+csv_data = pd.read_csv('ex2.csv', sep=',')
+
+print('Data Loaded:')
+print(csv_data)
+
+x_data = csv_data[['x1','x2','x3','x4','x5','x6','x7','x8']]
+y_data = csv_data['y']
 
 problem_dict1 = {
     "bounds": FloatVar(lb=(lb,) * D, ub=(ub,) * D, name="delta"),
     "obj_func": fitness_function,
     "minmax": "min",
-    "log_to": None, #"file",
-#    "log_file": "result.log",
+    "log_to": "console",
 }
 
 model1 = PSO.AIW_PSO(epoch=ME, pop_size=PS, c1=2.05, c2=2.05, alpha=0.8)
-model2 = PSO.OriginalPSO(epoch=ME, pop_size=PS, c1=2.05, c2=2.05, w_min=0.7, w_max=0.8)
-model3 = MFO.OriginalMFO(epoch=ME, pop_size=PS)
-model4 = EFO.DevEFO(epoch=ME, pop_size=PS, r_rate = 0.3, ps_rate = 0.95, p_field = 0.3, n_field = 0.5)
-model5 = ASO.OriginalASO(epoch=ME, pop_size=PS, alpha = 50, beta = 0.2)
-model6 = MA.OriginalMA(epoch=ME, pop_size=PS, pc = 0.85, pm = 0.15, p_local = 0.5, max_local_gens = 10, bits_per_param = 4)
-model7 = ACOR.OriginalACOR(epoch=ME, pop_size=PS, sample_count = 25, intent_factor = 0.5, zeta = 1.0)
-model8 = BBO.DevBBO(epoch=ME, pop_size=PS, p_m=0.01, n_elites=2)
-model9 = GSKA.DevGSKA(epoch=ME, pop_size=PS, pb = 0.1, kr = 0.9)
-model10= SA.GaussianSA(epoch=ME, pop_size=2, temp_init = 100, cooling_rate = 0.99, scale = 0.1)
 
+print('Initializing problem solving')
 g_best1 = model1.solve(problem_dict1)
 model = model1
 g_best = g_best1
 nm = 1
-print("Running Model")
-g_best2 = model2.solve(problem_dict1)
-if (g_best2.target.fitness < g_best.target.fitness):
-    model = model2
-    g_best = g_best2
-    nm = 2
-print("Running Model")
-g_best3 = model3.solve(problem_dict1)
-if (g_best3.target.fitness < g_best.target.fitness):
-    model = model3
-    g_best = g_best3
-    nm = 3
-print("Running Model")
-g_best4 = model4.solve(problem_dict1)
-if (g_best4.target.fitness < g_best.target.fitness):
-    model = model4
-    g_best = g_best4
-    nm = 4
-print("Running Model")
-g_best5 = model5.solve(problem_dict1)
-if (g_best5.target.fitness < g_best.target.fitness):
-    model = model5
-    g_best = g_best5
-    nm = 5
-print("Running Model")
-g_best6 = model6.solve(problem_dict1)
-if (g_best6.target.fitness < g_best.target.fitness):
-    model = model6
-    g_best = g_best6
-    nm = 6
-print("Running Model")
-g_best7 = model7.solve(problem_dict1)
-if (g_best7.target.fitness < g_best.target.fitness):
-    model = model7
-    g_best = g_best7
-    nm = 7
-print("Running Model")
-g_best8 = model8.solve(problem_dict1)
-if (g_best8.target.fitness < g_best.target.fitness):
-    model = model8
-    g_best = g_best8
-    nm = 8
-print("Running Model")
-g_best9 = model9.solve(problem_dict1)
-if (g_best9.target.fitness < g_best.target.fitness):
-    model = model9
-    g_best = g_best9
-    nm = 9
-print("Running Model")
-g_best10 = model10.solve(problem_dict1)
-if (g_best10.target.fitness < g_best.target.fitness):
-    model = model10
-    g_best = g_best10
-    nm = 10
-# g_best11 = direct(fitness_function, bounds=[(lb, ub)])
-# if (g_best11.fun < g_best.target.fitness):
-#     print("### => ATTENTION!")
-#     nm = 11
-# g_best12 = shgo(fitness_function, bounds=[(lb, ub)])
-# if (g_best12.fun < g_best.target.fitness):
-#     print("### => ATTENTION!")
-#     nm = 12
 
 print(f"Model: {model1.name}, Solution: {g_best1.solution}, Fitness: {g_best1.target.fitness}")
-print(f"Model: {model2.name}, Solution: {g_best2.solution}, Fitness: {g_best2.target.fitness}")
-print(f"Model: {model3.name}, Solution: {g_best3.solution}, Fitness: {g_best3.target.fitness}")
-print(f"Model: {model4.name}, Solution: {g_best4.solution}, Fitness: {g_best4.target.fitness}")
-print(f"Model: {model5.name}, Solution: {g_best5.solution}, Fitness: {g_best5.target.fitness}")
-print(f"Model: {model6.name}, Solution: {g_best6.solution}, Fitness: {g_best6.target.fitness}")
-print(f"Model: {model7.name}, Solution: {g_best7.solution}, Fitness: {g_best7.target.fitness}")
-print(f"Model: {model8.name}, Solution: {g_best8.solution}, Fitness: {g_best8.target.fitness}")
-print(f"Model: {model9.name}, Solution: {g_best9.solution}, Fitness: {g_best9.target.fitness}")
-print(f"Model: {model10.name}, Solution: {g_best10.solution}, Fitness: {g_best10.target.fitness}")
-# print(f"Model: {"DIRECT"}, Solution: {g_best11.x}, Fitness: {g_best11.fun}")
-# print(f"Model: {"SHGO"}, Solution: {g_best12.x}, Fitness: {g_best12.fun}")
 
 print("Best model: ")
 print(f"#{nm}, Model: {model.name}, Solution: {g_best.solution}, Fitness: {g_best.target.fitness}")
 
+dimensions = []
+for i in range(D):
+    dimensions.append((lb, ub))
+
 res = gp_minimize(fitness_function,   # the function to minimize
-                  [(lb, ub), (lb, ub)],         # the bounds on each dimension of x
+                  dimensions,         # the bounds on each dimension of x
                   initial_point_generator="random",
                   acq_func="gp_hedge",      # the acquisition function
                   n_calls=100,         # the number of evaluations of f
@@ -203,22 +135,25 @@ res = gp_minimize(fitness_function,   # the function to minimize
 
 g_best.solution[0]
 
-plt.figure(figsize=FS, dpi=DPI)
-# Set default sans-serif font
-plt.rcParams['font.sans-serif'] = "Times New Roman"
-# Then, "ALWAYS use sans-serif fonts"
-plt.rcParams['font.family'] = "sans-serif"
-plt.rcParams['mathtext.fontset'] = "cm"
-plt.tick_params(axis='both', direction='in', length=5)
-
 sns.set_theme(font="Times New Roman", font_scale=3)
 
 plot_convergence(res)
 
-def fitted_function(x):
-    a1, b1 = g_best.solution
-    f = np.sin(b1 * x) + np.sin(a1 * x)
+def fitted_function():
+    Ws = g_best.solution
+    f = Ws[0]
+    for i in range(len(Ws)):
+        if i == 0:
+            continue
+        f += x_data[f'x{i}'] * Ws[i]
     return f
+
+sns.set_theme(font="Times New Roman", font_scale=3)
+
+y_data_fit = fitted_function()
+
+print('\nValue')
+print(y_data_fit)
 
 plt.figure(figsize=FS, dpi=DPI)
 # Set default sans-serif font
@@ -228,17 +163,19 @@ plt.rcParams['font.family'] = "sans-serif"
 plt.rcParams['mathtext.fontset'] = "cm"
 plt.tick_params(axis='both', direction='in', length=5)
 
-sns.set_theme(font="Times New Roman", font_scale=3)
+plot_convergence(res)
+
+plt.figure(figsize=FS, dpi=DPI)
+# Set default sans-serif font
+plt.rcParams['font.sans-serif'] = "Times New Roman"
+# Then, "ALWAYS use sans-serif fonts"
+plt.rcParams['font.family'] = "sans-serif"
+plt.rcParams['mathtext.fontset'] = "cm"
+plt.tick_params(axis='both', direction='in', length=5)
 
 plt.xlabel("$x$")
 plt.ylabel("$f(x)$")
 
-x_fun = np.linspace(lb, ub, npoints*100)
-fun = objective_function(x_fun)
-y_data_fit = fitted_function(x_fun)
-
-plt.scatter(x_data, y_data, label='Data', color=RED, s=100)
-plt.plot(x_fun, y_data_fit, label='Fit', color=GREEN, linewidth=3)
-plt.plot(x_fun, fun, label="$\\sin(x) + \\sin\\!\\left(\\frac{10x}{3}\\right)$", color=BLUE, linewidth=3)
+plt.scatter(y_data_fit, y_data, label='Data', color=RED, s=100)
 plt.legend(loc='best')
 plt.show()
