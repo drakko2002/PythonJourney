@@ -1,0 +1,53 @@
+O arquivo afkjourneysetup_a4be67daa13d4b77520ce8b79565fc18.exe foi movido com sucesso para C:\Users\Acer\Downloads\afkjourneysetup_a4be67daa13d4b77520ce8b79565fc18.exe!
+O arquivo Anaconda3-2024.10-1-Windows-x86_64.exe foi movido com sucesso para C:\Users\Acer\Downloads\Anaconda3-2024.10-1-Windows-x86_64.exe!
+O arquivo Arduino IDE.exe foi movido com sucesso para C:\Users\Acer\Downloads\Arduino IDE.exe!
+O arquivo Battle.net-Setup (1).exe foi movido com sucesso para C:\Users\Acer\Downloads\Battle.net-Setup (1).exe!
+O arquivo Battle.net-Setup.exe foi movido com sucesso para C:\Users\Acer\Downloads\Battle.net-Setup.exe!
+O arquivo CurseForge - Installer.exe foi movido com sucesso para C:\Users\Acer\Downloads\CurseForge - Installer.exe!
+O arquivo Dead Cells v1.9-v34 Plus 13 Trainer 32 Bit (Steam, GOG).exe foi movido com sucesso para C:\Users\Acer\Downloads\Dead Cells v1.9-v34 Plus 13 Trainer 32 Bit (Steam, GOG).exe!
+O arquivo Dead Cells v1.9-v34 Plus 13 Trainer 64 Bit (Epic Games Store, Xbox Game Pass).exe foi movido com sucesso para C:\Users\Acer\Downloads\Dead Cells v1.9-v34 Plus 13 Trainer 64 Bit (Epic Games Store, Xbox Game Pass).exe!
+O arquivo DiscordSetup.exe foi movido com sucesso para C:\Users\Acer\Downloads\DiscordSetup.exe!
+O arquivo Docker Desktop Installer.exe foi movido com sucesso para C:\Users\Acer\Downloads\Docker Desktop Installer.exe!
+O arquivo eclipse-inst-jre-win64 (1).exe foi movido com sucesso para C:\Users\Acer\Downloads\eclipse-inst-jre-win64 (1).exe!
+O arquivo eclipse-inst-jre-win64.exe foi movido com sucesso para C:\Users\Acer\Downloads\eclipse-inst-jre-win64.exe!
+O arquivo FileZilla_3.68.0_win64_sponsored2-setup.exe foi movido com sucesso para C:\Users\Acer\Downloads\FileZilla_3.68.0_win64_sponsored2-setup.exe!
+O arquivo Firefox Installer.exe foi movido com sucesso para C:\Users\Acer\Downloads\Firefox Installer.exe!
+O arquivo Git-2.47.1-64-bit.exe foi movido com sucesso para C:\Users\Acer\Downloads\Git-2.47.1-64-bit.exe!
+O arquivo GitHubDesktopSetup-x64.exe foi movido com sucesso para C:\Users\Acer\Downloads\GitHubDesktopSetup-x64.exe!
+O arquivo GrammarlyInstaller.exe foi movido com sucesso para C:\Users\Acer\Downloads\GrammarlyInstaller.exe!
+O arquivo Hades v1.0-v1.38 Plus 15 Trainer x64.exe foi movido com sucesso para C:\Users\Acer\Downloads\Hades v1.0-v1.38 Plus 15 Trainer x64.exe!
+O arquivo HDT-Installer (1).exe foi movido com sucesso para C:\Users\Acer\Downloads\HDT-Installer (1).exe!
+O arquivo HDT-Installer.exe foi movido com sucesso para C:\Users\Acer\Downloads\HDT-Installer.exe!
+O arquivo InnkeeperSetup (1).exe foi movido com sucesso para C:\Users\Acer\Downloads\InnkeeperSetup (1).exe!
+O arquivo InnkeeperSetup.exe foi movido com sucesso para C:\Users\Acer\Downloads\InnkeeperSetup.exe!
+O arquivo K-Lite_Codec_Pack_1768_Full.exe foi movido com sucesso para C:\Users\Acer\Downloads\K-Lite_Codec_Pack_1768_Full.exe!
+O arquivo MinecraftInstaller.exe foi movido com sucesso para C:\Users\Acer\Downloads\MinecraftInstaller.exe!
+O arquivo Miniforge3-Windows-x86_64.exe foi movido com sucesso para C:\Users\Acer\Downloads\Miniforge3-Windows-x86_64.exe!
+O arquivo mosquitto-2.0.21a-install-windows-x64.exe foi movido com sucesso para C:\Users\Acer\Downloads\mosquitto-2.0.21a-install-windows-x64.exe!
+O arquivo msys2-x86_64-20220319.exe foi movido com sucesso para C:\Users\Acer\Downloads\msys2-x86_64-20220319.exe!
+O arquivo netmarble_sololv_A_installer_90112.exe foi movido com sucesso para C:\Users\Acer\Downloads\netmarble_sololv_A_installer_90112.exe!
+O arquivo Omega_Installer-Windows.exe foi movido com sucesso para C:\Users\Acer\Downloads\Omega_Installer-Windows.exe!
+O arquivo OperaGXSetup (1).exe foi movido com sucesso para C:\Users\Acer\Downloads\OperaGXSetup (1).exe!
+O arquivo OperaGXSetup.exe foi movido com sucesso para C:\Users\Acer\Downloads\OperaGXSetup.exe!
+O arquivo PhpStorm-2023.2.2.exe foi movido com sucesso para C:\Users\Acer\Downloads\PhpStorm-2023.2.2.exe!
+O arquivo Planet Centauri V0.7.0 Plus 6 Trainer.EXE foi movido com sucesso para C:\Users\Acer\Downloads\Planet Centauri V0.7.0 Plus 6 Trainer.EXE!
+O arquivo pycharm-community-2024.2.4.exe foi movido com sucesso para C:\Users\Acer\Downloads\pycharm-community-2024.2.4.exe!
+O arquivo pycharm-community-2024.3.1.exe foi movido com sucesso para C:\Users\Acer\Downloads\pycharm-community-2024.3.1.exe!
+O arquivo pycharm-edu-2022.2.2.exe foi movido com sucesso para C:\Users\Acer\Downloads\pycharm-edu-2022.2.2.exe!
+O arquivo python-3.12.8-amd64.exe foi movido com sucesso para C:\Users\Acer\Downloads\python-3.12.8-amd64.exe!
+O arquivo python-3.13.1-amd64.exe foi movido com sucesso para C:\Users\Acer\Downloads\python-3.13.1-amd64.exe!
+O arquivo Radmin_VPN_1.3.4570.5.exe foi movido com sucesso para C:\Users\Acer\Downloads\Radmin_VPN_1.3.4570.5.exe!
+O arquivo RPG Bots™.exe foi movido com sucesso para C:\Users\Acer\Downloads\RPG Bots™.exe!
+O arquivo setup-lightshot.exe foi movido com sucesso para C:\Users\Acer\Downloads\setup-lightshot.exe!
+O arquivo Simulador de Autômatos.exe foi movido com sucesso para C:\Users\Acer\Downloads\Simulador de Autômatos.exe!
+O arquivo SpotifySetup.exe foi movido com sucesso para C:\Users\Acer\Downloads\SpotifySetup.exe!
+O arquivo Sublime Text Build 3211 x64 Setup.exe foi movido com sucesso para C:\Users\Acer\Downloads\Sublime Text Build 3211 x64 Setup.exe!
+O arquivo Tempo Launcher - Beta Setup 0.1.54(1).exe foi movido com sucesso para C:\Users\Acer\Downloads\Tempo Launcher - Beta Setup 0.1.54(1).exe!
+O arquivo Tempo Launcher - Beta Setup 0.1.54.exe foi movido com sucesso para C:\Users\Acer\Downloads\Tempo Launcher - Beta Setup 0.1.54.exe!
+O arquivo VirtualBox-7.0.8-156879-Win.exe foi movido com sucesso para C:\Users\Acer\Downloads\VirtualBox-7.0.8-156879-Win.exe!
+O arquivo VSCodeUserSetup-x64-1.79.2.exe foi movido com sucesso para C:\Users\Acer\Downloads\VSCodeUserSetup-x64-1.79.2.exe!
+O arquivo WeMod-Setup.exe foi movido com sucesso para C:\Users\Acer\Downloads\WeMod-Setup.exe!
+O arquivo xampp-windows-x64-8.2.12-0-VS16-installer (1).exe foi movido com sucesso para C:\Users\Acer\Downloads\xampp-windows-x64-8.2.12-0-VS16-installer (1).exe!
+O arquivo xampp-windows-x64-8.2.12-0-VS16-installer.exe foi movido com sucesso para C:\Users\Acer\Downloads\xampp-windows-x64-8.2.12-0-VS16-installer.exe!
+O arquivo zen.installer (1).exe foi movido com sucesso para C:\Users\Acer\Downloads\zen.installer (1).exe!
+O arquivo zen.installer.exe foi movido com sucesso para C:\Users\Acer\Downloads\zen.installer.exe!
