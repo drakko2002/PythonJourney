@@ -1,7 +1,7 @@
 import os
 import shutil
 
-downloads_path = os.path.join(os.path.expanduser("~", "Downloads"))
+downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
 pdfs_path = os.path.join(downloads_path,"PDFs")
 #Nisso, buscamos o caminho de sistema dos downloads e
 #definimos uma pasta para mover os arquivos de PDF
