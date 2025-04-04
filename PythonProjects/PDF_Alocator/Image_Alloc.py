@@ -4,7 +4,7 @@ import shutil
 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
 imagery_path = os.path.join(downloads_path, "Images")
 #Nisso, buscamos o caminho de sistema dos downloads e
-#definimos uma pasta para mover os arquivos de PDF
+#definimos uma pasta para mover os arquivos de imagem
 
 os.makedirs(imagery_path, exist_ok=True)
 #Faz checagem do diretório com validação por valor booleano
