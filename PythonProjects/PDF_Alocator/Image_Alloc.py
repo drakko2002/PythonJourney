@@ -12,7 +12,7 @@ os.makedirs(imagery_path, exist_ok=True)
 
 for filename in os.listdir(downloads_path):
     if (filename.lower().endswith(".webp") or filename.lower().endswith(".jpeg") or filename.lower().endswith(".jpg") or
-            filename.lower().endswith(".png")) or filename.lower().endswith(".gif"):
+            filename.lower().endswith(".png")) or filename.lower().endswith(".gif") or filename.lower().endswith(".jfif"):
         origem = os.path.join(downloads_path, filename)
         destino = os.path.join(imagery_path, filename)
         #Laço for pra definição de variáveis e caminhos
