@@ -1,9 +1,9 @@
 import threading
-from models import model
-from views import view
+import model
+import views
 
 class ProdutorConsumidorController:
-    def __init__(self, model: model, view: view):
+    def __init__(self, model: model, view: views):
         self.model = model
         self.view = view
         # conecta eventos model->view
