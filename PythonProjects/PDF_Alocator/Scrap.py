@@ -2,21 +2,22 @@ import os
 import shutil
 
 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-imagery_path = os.path.join(downloads_path, "Images")
+pdfs_path = os.path.join(downloads_path,"Scrap")
 #Nisso, buscamos o caminho de sistema dos downloads e
-#definimos uma pasta para mover os arquivos de imagem
+#definimos uma pasta para mover os arquivos de PDF
 
-os.makedirs(imagery_path, exist_ok=True)
+os.makedirs(pdfs_path, exist_ok=True)
 #Faz checagem do diretório com validação por valor booleano
 #Para constatar se existe ou não.
-
-def imagery():
+def scrap():
     for filename in os.listdir(downloads_path):
-        if (filename.lower().endswith(".webp") or filename.lower().endswith(".jpeg") or filename.lower().endswith(".jpg") or
-                filename.lower().endswith(".png")) or filename.lower().endswith(".gif") or filename.lower().endswith(".jfif")\
-                or filename.lower().endswith(".avif"):
+        if filename.lower().endswith(".xlsx") or filename.lower().endswith(".htm")\
+                or filename.lower().endswith(".html") or filename.lower().endswith(".mhtml")\
+                or filename.lower().endswith(".xml") or filename.lower().endswith(".dll")\
+                or filename.lower().endswith(".dat") or filename.lower().endswith(".htm")\
+                or filename.lower().endswith(".jar"):
             origem = os.path.join(downloads_path, filename)
-            destino = os.path.join(imagery_path, filename)
+            destino = os.path.join(pdfs_path, filename)
             #Laço for pra definição de variáveis e caminhos
 
             try:
@@ -26,4 +27,4 @@ def imagery():
                 print(f"Ocorreu um erro ao mover {filename}: {e}")
                 #Bloco try/except pra tentativa com retorno de exceção
                 #Salva na variável "e" para boas práticas.
-imagery()
+scrap()

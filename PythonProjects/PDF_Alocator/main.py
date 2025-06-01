@@ -7,6 +7,7 @@ import PDF_Alloc
 import Zip_Allocator
 import TXT_Alloc
 import SQL_Alloc
+import Scrap
 
 def main():
     Doc_Alloc.doc()
@@ -18,5 +19,6 @@ def main():
     Zip_Allocator.zipi()
     TXT_Alloc.txt()
     SQL_Alloc.sqfiles()
+    Scrap.scrap()
 if __name__ == "__main__":
     main()

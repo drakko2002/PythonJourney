@@ -13,7 +13,7 @@ def mp4():
     for filename in os.listdir(downloads_path):
         if (filename.lower().endswith(".mp4") or filename.lower().endswith(".m4a")
                 or filename.lower().endswith(".webm") or filename.lower().endswith("5.1") or '5.1' in filename)\
-                or "720p" in filename.lower() or "1080p" in filename.lower():
+                or "720p" in filename.lower() or "1080p" in filename.lower() or filename.lower().endswith(".avi"):
             origem = os.path.join(downloads_path, filename)
             destino = os.path.join(mp4_path, filename)
 

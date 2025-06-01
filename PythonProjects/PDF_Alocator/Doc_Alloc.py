@@ -13,8 +13,9 @@ def doc():
     for filename in os.listdir(downloads_path):
         #Aqui criamos um laço for que vai iterar pelos documentos contidos na lista de diretório
         #inserido como argumento.
-        if filename.lower().endswith(".docx") or filename.lower().endswith(".pdf") or filename.lower().endswith(".ppt")\
-                or filename.lower().endswith(".pptx") or filename.lower().endswith(".doc") or filename.lower().endswith(".rtf"):
+        if (filename.lower().endswith(".docx") or filename.lower().endswith(".pdf") or filename.lower().endswith(".ppt")
+                or filename.lower().endswith(".pptx") or filename.lower().endswith(".doc")
+                or filename.lower().endswith(".rtf")) or filename.lower().endswith(".asta"):
             origem = os.path.join(downloads_path, filename)
             destino = os.path.join(doc_path, filename)
 
